@@ -1,3 +1,11 @@
-<p>
-  users-list works!
-</p>
+<table id="customers">
+  <tr>
+    <th *ngFor="let header of tableHeaders">{{header}}</th>
+  </tr>
+  <tr *ngFor="let user of users" (click)=saveUserData(user.login.uuid)>
+    <td>{{user.name.first}}</td>
+    <td>{{user.name.last}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.phone}}</td>
+  </tr>
+</table>

@@ -1,11 +1,12 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { UsersListComponent } from "./users-list.component";
-console.log(UsersListComponent);
+import { UserDetailComponent } from "./user-detail/user-detail.component";
+import { CanActivateRouteGuard } from './can-activate-route.guard';
 
 const routes: Routes = [
   {path: '',component: UsersListComponent},
-  {path: '/list',component: UsersListComponent}
+  {path: ':id',component: UserDetailComponent,canActivate: [CanActivateRouteGuard]}
 ];
 
 @NgModule({

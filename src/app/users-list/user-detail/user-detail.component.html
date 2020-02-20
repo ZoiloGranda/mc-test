@@ -1,0 +1,49 @@
+
+<div class="frame">
+  <div class="center">
+    
+		<div class="profile">
+			<div class="image">
+				<div class="circle-1"></div>
+				<div class="circle-2"></div>
+				<img [src]="user.picture.large" [alt]="user.name" width="70" height="70">
+			</div>
+			
+			<div class="name">{{user.name.first +' '+ user.name.last}}</div>
+			<div class="job">{{user.login.username}}</div>
+			
+			<div class="actions">
+    <div class="box">
+     <span class="parameter">Email:</span>
+     <span class="value">{{user.email}}</span>
+    </div>
+    <div class="box">
+     <span class="parameter">Phone:</span>
+     <span class="value">{{user.phone}}</span>
+    </div>
+    <div class="actions">
+     <span class="btn" [routerLink]="['/userslist']">Back</span>
+    </div>
+			</div>
+		</div>
+		
+		<div class="stats">
+			<div class="box">
+				<span class="value">{{user.location.city}}</span>
+				<span class="parameter">City</span>
+			</div>
+			<div class="box">
+				<span class="value">{{user.location.state}}</span>
+				<span class="parameter">State</span>
+			</div>
+			<div class="box">
+				<span class="value">{{user.location.country}}</span>
+				<span class="parameter">Country</span>
+			</div>
+   <div class="box">
+    <span class="value">146</span>
+    <span class="parameter">Follower</span>
+   </div>
+		</div>
+  </div>
+</div>
