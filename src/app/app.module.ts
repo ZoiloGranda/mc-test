@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
-import { UsersService } from './users/users.service'
+import { UsersService } from './users/services/users.service'
 
 
 @NgModule({

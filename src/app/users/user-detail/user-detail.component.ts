@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from "@angular/router";
-import { UsersService } from '../users.service';
-import { User } from '../users.model';
+import { UsersService } from '../services/users.service';
+import { User } from '../models/users.model';
 
 @Component({
   selector: 'ng-e-user-detail',

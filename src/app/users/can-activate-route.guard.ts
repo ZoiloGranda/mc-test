@@ -6,7 +6,7 @@ import {
 	Router
 } from '@angular/router';
 
-import { UsersService } from './users.service';
+import { UsersService } from './services/users.service';
 
 @Injectable()
 export class CanActivateRouteGuard implements CanActivate {
