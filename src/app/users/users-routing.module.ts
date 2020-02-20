@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { UsersListComponent } from "./users-list.component";
+import { UsersListComponent } from "./users-list/users-list.component";
 import { UserDetailComponent } from "./user-detail/user-detail.component";
 import { CanActivateRouteGuard } from './can-activate-route.guard';
 
@@ -15,4 +15,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class UsersListRoutingModule { }
+export class UsersRoutingModule { }

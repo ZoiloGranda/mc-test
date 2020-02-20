@@ -6,15 +6,15 @@ import {
 	Router
 } from '@angular/router';
 
-import { UsersListService } from './users-list.service';
+import { UsersService } from './users.service';
 
 @Injectable()
 export class CanActivateRouteGuard implements CanActivate {
 
-	constructor(private usersListService: UsersListService, private router: Router) { }
+	constructor(private usersService: UsersService, private router: Router) { }
 
 	canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-		if (this.usersListService.getHasUserSaved()) {
+		if (this.usersService.getHasUserSaved()) {
    return true
   } 
   this.router.navigate(['/userslist']);

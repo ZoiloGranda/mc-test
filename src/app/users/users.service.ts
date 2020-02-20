@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from './users-list.model';
+import { User } from './users.model';
 
 @Injectable()
-export class UsersListService {
+export class UsersService {
 	private params = 'results=20&inc=name,email,phone,login,location,picture'
 	private url = 'https://randomuser.me/api/?'
 	private userDetails: User;

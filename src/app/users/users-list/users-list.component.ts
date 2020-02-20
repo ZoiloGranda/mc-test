@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UsersListService } from './users-list.service';
-import { User } from './users-list.model';
+import { UsersService } from '../users.service';
+import { User } from '../users.model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -18,15 +18,15 @@ export class UsersListComponent implements OnInit {
 	]
 	users: User[];
 
-	constructor(public usersListService: UsersListService, private router: Router) { }
+	constructor(public usersService: UsersService, private router: Router) { }
 
 	ngOnInit() {
-		this.usersListService.getUsersList()
+		this.usersService.getUsersList()
 			.subscribe((data) => this.users = data.results);
 	}
 
 	saveUserData(uuid: string) {
-		this.usersListService.setUserDetails(this.users.filter(function (el) {
+		this.usersService.setUserDetails(this.users.filter(function (el) {
 			return el.login.uuid === uuid;
 		})[0])
 		this.goToDetails(uuid);

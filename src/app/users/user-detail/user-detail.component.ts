@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from "@angular/router";
-import { UsersListService } from '../users-list.service';
-import { User } from '../users-list.model';
+import { UsersService } from '../users.service';
+import { User } from '../users.model';
 
 @Component({
   selector: 'ng-e-user-detail',
@@ -11,10 +11,10 @@ import { User } from '../users-list.model';
 export class UserDetailComponent implements OnInit {
  user:User;
 
-  constructor(public usersListService: UsersListService) { }
+  constructor(public usersService: UsersService) { }
 
   ngOnInit() {
-   this.user = this.usersListService.getUserDetails();
+   this.user = this.usersService.getUserDetails();
   }
 
 }

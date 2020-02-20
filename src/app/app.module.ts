@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
-import { UsersListService } from './users-list/users-list.service'
+import { UsersService } from './users/users.service'
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { UsersListService } from './users-list/users-list.service'
     AppRoutingModule,
     CoreModule
   ],
-  providers: [UsersListService],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
